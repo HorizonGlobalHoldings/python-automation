@@ -1,0 +1,1 @@
+import pandas as pd; from datetime import datetime; data = [{'Timestamp': str(datetime.now()), 'Customer': 'Acme Corp', 'Amount': 50000, 'Status': 'Paid'}]; df = pd.DataFrame(data); df.to_csv('orders.csv', mode='a', index=False, header=not pd.io.common.file_exists('orders.csv')); print('Order logged successfully to orders.csv')
